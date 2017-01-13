@@ -22,8 +22,8 @@ public class MovingObject : MonoBehaviour
         transform.position = destination.position;
         transform.eulerAngles = destination.eulerAngles;
     }
-	
-	  void FixedUpdate()
+
+    void FixedUpdate()
     {
         Transform destination = _WayPoints.transform.GetChild(_IndexWayPoint);
         Vector3 diff = destination.position - transform.position;
