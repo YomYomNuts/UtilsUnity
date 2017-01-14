@@ -82,10 +82,13 @@ namespace VRStandardAssets.Menu
                 OnButtonSelected(this);
 
             // Wait for the camera to fade out.
-            yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
+            //yield return StartCoroutine(m_CameraFade.BeginFadeOut(true));
 
             // Load the level.
             Destroy(this.gameObject);
+            
+            // When the user looks away from the rendering of the scene, hide the radial.
+            m_SelectionRadial.Hide();
         }
     }
 }
